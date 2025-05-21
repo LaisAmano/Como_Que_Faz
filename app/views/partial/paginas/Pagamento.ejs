@@ -1,0 +1,174 @@
+<main>
+    <section class="mapa-do-site-pagamento">
+        <a class="mapa_do_site-link" href="/">Home</a>
+        <p class="seta-mapa">></p>
+        <a class="mapa_do_site-link2" href="/bigodes-de-ouro">Bigodes de ouro</a>
+        <a class="mapa_do_site-atual"> > Pagamento </a>
+    </section>
+
+    <section class="sections-pagamento-grupo">
+        <section class="section-pagamento">
+            <figure class="titulo-section-pagamento">
+                <img class="imagem-titulo-pagamento" src="./imagens-svg/2-body/gato-com-bigode-cinza.svg" alt="">
+                <h1 class="h1-titulo-pagamento">Produtos</h1>
+            </figure>
+            <article class="conteudo-article-pagamento">
+                Bigodes de Ouro: Plano Semanal
+            </article>
+            <article class="valorTotal-produtos-pagamento">
+                <p class="p-valorTotal">Valor Total:</p>
+                <p class="p-valorTotal">R$ 69,69</p>
+            </article>
+        </section>
+        <section class="section-pagamento">
+            <figure class="titulo-section-pagamento">
+                <img class="imagem-titulo-pagamento" src="./imagens-svg/2-body/dados-cadastrais-cinza.svg" alt="">
+                <h1 class="h1-titulo-pagamento">Dados cadastrais</h1>
+            </figure>
+            <article class="conteudo-article-pagamento">
+                <figure class="dadosCadastrais-pagamento">
+                    <button class="button-dadosCadastrais">Editar dados</button>
+                    <h3 class="h3-dadosCadastrais">Nome:</h3>
+                    <p class="p-dadosCadastrais">Sofia Albuquerque Lima</p>
+
+                    <h3 class="h3-dadosCadastrais">E-mail:</h3>
+                    <p class="p-dadosCadastrais">sofialindinhafofinha@gmail.com</p>
+                </figure>
+            </article>
+        </section>
+        <section class="section-pagamento">
+            <figure class="titulo-section-pagamento">
+                <img class="imagem-titulo-pagamento" src="./imagens-svg/2-body/cartao-cinza.svg" alt="">
+                <h1 class="h1-titulo-pagamento">Método de pagamento</h1>
+            </figure>
+            <article class="conteudo-article-pagamento">
+
+                <div id="paymentBrick_container">
+                </div>
+                <script>
+                    const mp = new MercadoPago('YOUR_PUBLIC_KEY', {
+                        locale: 'pt'
+                    });
+                    const bricksBuilder = mp.bricks();
+                    const renderPaymentBrick = async (bricksBuilder) => {
+                        const settings = {
+                            initialization: {
+                                /*
+                                  "amount" é a quantia total a pagar por todos os meios de pagamento com exceção da Conta Mercado Pago e Parcelas sem cartão de crédito, que têm seus valores de processamento determinados no backend através do "preferenceId"
+                                */
+                                amount: 10000,
+                                preferenceId: "<PREFERENCE_ID>",
+                                payer: {
+                                    firstName: "",
+                                    lastName: "",
+                                    email: "",
+                                },
+                            },
+                            customization: {
+                                visual: {
+                                    hideFormTitle: true,
+                                    hidePaymentButton: true,
+                                    style: {
+                                        theme: "flat",
+                                    },
+                                },
+                                paymentMethods: {
+                                    creditCard: "all",
+                                    debitCard: "all",
+                                    ticket: "all",
+                                    bankTransfer: "all",
+                                    atm: "all",
+                                    wallet_purchase: "all",
+                                    maxInstallments: 1
+                                },
+                            },
+                            callbacks: {
+                                onReady: () => {
+                                    /*
+                                     Callback chamado quando o Brick está pronto.
+                                     Aqui, você pode ocultar seu site, por exemplo.
+                                    */
+                                },
+                                onSubmit: ({ selectedPaymentMethod, formData }) => {
+                                    // callback chamado quando há click no botão de envio de dados
+                                    return new Promise((resolve, reject) => {
+                                        fetch("/process_payment", {
+                                            method: "POST",
+                                            headers: {
+                                                "Content-Type": "application/json",
+                                            },
+                                            body: JSON.stringify(formData),
+                                        })
+                                            .then((response) => response.json())
+                                            .then((response) => {
+                                                // receber o resultado do pagamento
+                                                resolve();
+                                            })
+                                            .catch((error) => {
+                                                // manejar a resposta de erro ao tentar criar um pagamento
+                                                reject();
+                                            });
+                                    });
+                                },
+                                onError: (error) => {
+                                    // callback chamado para todos os casos de erro do Brick
+                                    console.error(error);
+                                },
+                            },
+                        };
+                        window.paymentBrickController = await bricksBuilder.create(
+                            "payment",
+                            "paymentBrick_container",
+                            settings
+                        );
+                    };
+                    renderPaymentBrick(bricksBuilder);
+                </script>
+                <!-- <label for="radio-pagamentos1" class="radio-label-pagamentos">
+                    <article class="article-label-pagamento">
+                        <img src="./imagens-svg/2-body/icone-pix.svg" class="img-metodo-pagamento" alt="icone pix">
+                        <p class="p-metodo-pagamento">Pix</p>
+                    </article>
+                    <figure class="figure-input-label-pagamento">
+                        <input type="radio" id="radio-pagamentos1" class="radio-input-pagamentos"
+                            name="radio_pagamento">
+                    </figure>
+                </label>
+
+                <label for="radio-pagamentos2" class="radio-label-pagamentos">
+                    <article class="article-label-pagamento">
+                        <img src="./imagens-svg/2-body/cartao-cinza.svg" class="img-metodo-pagamento"
+                            alt="icone cartao">
+                        <p class="p-metodo-pagamento">Cartão de Crédito</p>
+                    </article>
+                    <figure class="figure-input-label-pagamento">
+                        <input type="radio" id="radio-pagamentos2" class="radio-input-pagamentos"
+                            name="radio_pagamento">
+                    </figure>
+                </label>
+
+                <label for="radio-pagamentos3" class="radio-label-pagamentos">
+                    <article class="article-label-pagamento">
+                        <img src="./imagens-svg/2-body/boleto-icon.svg" class="img-metodo-pagamento" alt="icone boleto">
+                        <p class="p-metodo-pagamento">Boleto</p>
+                    </article>
+                    <figure class="figure-input-label-pagamento">
+                        <input type="radio" id="radio-pagamentos3" class="radio-input-pagamentos"
+                            name="radio_pagamento">
+                    </figure>
+                </label> -->
+            </article>
+        </section>
+    </section>
+
+    <section class="section-botoes-pagamento">
+        <article class="article-checkbox-pagamento">
+            <label for="checkbox-pagamento-automatico">Cobrança automática?</label>
+            <input type="checkbox" id="checkbox-pagamento-automatico">
+        </article>
+        <article class="article-botoes-pagamento">
+            <button class="button-cancelar-pagamento">Cancelar compra</button>
+            <button class="button-prosseguir-pagamento">Gerar link de pagamento</button>
+        </article>
+    </section>
+</main>

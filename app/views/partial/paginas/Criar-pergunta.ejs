@@ -1,0 +1,35 @@
+<main>
+   <form action="/criar-pergunta" method="post">
+
+      <header class="pergunta-header">
+      <section id="header-criar-pergunta">
+         <figure id="sair-criar-pergunta" onclick="goBack()">X</figure>
+         <figcaption id="header-titulo-criar-pergunta">Criar Pergunta</figcaption>
+      </section>
+
+      <section class="linha-baixo-pergunta">
+      </section>
+
+      <button class="publicarpergunta" type="submit" onclick="PaginaAnterior()">PUBLICAR</button>
+      </header>
+
+      <h1 class="texto-de-cima-pergunta">Faça sua pergunta:</h1>
+
+      <h2 class="titulo-descricao-pergunta">Descrição</h2>
+      <input type="text" id="input-titulo-da-pergunta" placeholder="DESCRIÇÃO DA PERGUNTA" name="pergunta_titulo">
+
+      <select class="filtropergunta" name="pergunta_categoria">
+         <option>Culinária</option>
+         <option>Limpeza</option>
+         <option>Bem Estar</option>
+      </select>
+
+
+   </form>
+
+   <script>
+      function PaginaAnterior() {
+          window.history.back(); // Volta à página anterior
+      }
+  </script>
+</main>

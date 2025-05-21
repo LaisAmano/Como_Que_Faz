@@ -1,0 +1,187 @@
+<main>
+    if (dadosNotificacao) { %>
+        <script>
+                notify("<%= dadosNotificacao.titulo%>","<%= dadosNotificacao.mensagem%>", "<%= dadosNotificacao.tipo%>", "center")
+                if("<%= dadosNotificacao.tipo %>" == "success"){
+                    setTimeout(function(){window.location="/"}, 3000)
+                }                        
+        </script>
+    <% } %>
+    
+    <section id="criar-post-cancela-mb">
+        <figure id="cancela-criar-post-mb" onclick="goBack()">X</figure>
+        <figcaption id="titulo-criar-post-mb">Criar Dica</figcaption>
+    </section>
+
+    <section class="linha-baixo-mb">
+        <section class="linha-progresso-mb" id="progresso-mb"></section>
+    </section>
+
+    <input type="hidden" name="pergunta_id" id="pergunta_id">
+
+    <form id="form-criar-mb" action="/criar-dica" method="post" enctype="multipart/form-data">
+        <section id="criar-post-etapas-mb">
+            <article id="botoes-criar-post-mb">
+                <button id="btnVoltar-mb" class="Voltar-mb" type="button">VOLTAR</button>
+                <button id="btnAvancar-mb" class="Avancar-mb" type="button">PRÓXIMA ETAPA...</button>
+            </article>
+
+            <nav class="lista-tarefas-mb">
+                <article class="tarefa-mb ativo" id="conteudoTarefa1-mb">
+                    <h2 id="detalhes-mb">Detalhes</h2>
+                    <section id="detalhes-primeira-parte-mb">
+                        <h3 id="titulo-da-postagem-mb">Título da Dica</h3>
+                        <input type="text" id="texto-titulo-da-postagem-mb" placeholder="Como que faz..."
+                            name="dica_titulo">
+
+                        <figure class="guarda-select">
+                            <input class="dialogoselect" id="dialogoselect" type="text" name="dica_categoria"
+                                onfocus="dropdown(0)" onblur="dropdown(1)" placeholder="CATEGORIA DA POSTAGEM*"
+                                readonly="readonly" required>
+
+                            <div class="dropDown" id="dropdown" style="z-index: 1000; display: none;">
+                                <div class="listDropDown">
+                                    <div value="culinaria-categoria" class="item-select-detalhes texto"
+                                        id="item-select-detalhes-1" onmousedown="category(1)">Culinária
+                                    </div>
+
+                                    <div class="item-select-detalhes texto" id="item-select-detalhes-2"
+                                        onmousedown="category(2)">Limpeza</div>
+
+                                    <div class="item-select-detalhes texto" id="item-select-detalhes-3"
+                                        onmousedown="category(3)">Bem Estar</div>
+                                </div>
+                            </div>
+                        </figure>
+
+                    </section>
+
+                    <section id="detalhes-segunda-parte-mb">
+                        <h3 id="tempo-resultado-detalhes-mb">Tempo & Resultado</h3>
+
+                        <section id="tempo-detalhes-mb">
+                            <img id="imagem-tempo-detalhes-mb" src="/imagens/tempo-cor-cinza.svg"
+                                alt="tempo de execução">
+                            <input type="number" id="horas-tempo-detalhes-mb" placeholder="00" name="dica_tempo_horas">
+                            H
+                            <input type="number" id="minutos-tempo-detalhes-mb" placeholder="00"
+                                name="dica_tempo_minutos">Min
+                        </section>
+
+                        <figure id="tempo-detalhes-porcoes">
+                            <img id="imagem-tempo-detalhes-porcoes-mb" src="/imagens/porçoes-cinza-culinaria.png"
+                                alt="tempo de execução">
+                            <input type="number" id="porcoes-tempo-detalhes-mb" max="100" min="0" placeholder="00"
+                                name="dica_porcoes">Porções
+                        </figure>
+
+                        <section id="descricao-detalhes-total-mb">
+                            <h3 id="titulo-descricao-detalhes-mb">Descrição</h3>
+                            <input type="text" id="descricao-detalhes-mb" name="dica_descricao">
+                        </section>
+
+                        <section id="subcategoria-detalhes-total">
+                            <h3 id="titulo-subcategoria-detalhes">Subcategorias</h3>
+                            <figure class="input-container">
+                                <input type="text" id="input-text-subcategoria" name="dica_subcategorias_input">
+                                <img src="/imagens/adicionar-etiqueta.svg" id="icon" onclick="adicionarMensagem()"
+                                    alt="adicionar uma Subcategoria">
+                            </figure>
+                            <figure id="messageList" class="message-list"></figure>
+                            <!-- Campo oculto para enviar as subcategorias como uma lista separada por vírgulas -->
+                            <input type="hidden" id="dica_subcategorias" name="dica_subcategorias">
+                        </section>
+                    </section>
+                </article>
+
+                <article class="tarefa-mb" id="conteudoTarefa2-mb">
+                    <h2 id="elementos-mb">Elementos & <br> Passo a passo</h2>
+                    <section id="esqueleto-elementos-mb">
+                        <h2 id="titulo-ingredientes-elementos-mb">INGREDIENTES</h2>
+                        <section id="clonados-ou-nao-mb">
+                            <article id="ingredientes-elementos-mb">
+                                <img id="botao-de-add-ingrediente-mb" src="/imagens/adicionar-ingrediente.svg"
+                                    onclick="duplicarDivmb()">
+                                <img id="botao-de-tirar-ingrediente-mb" src="/imagens/tirar-ingrediente.svg"
+                                    alt="excluir ingrediente" onclick="apagarDivmb(this)">
+                                <section id="sem-a-linha-rosa-mb">
+                                    <h4 id="nome-do-ingrediente-mb">Nome do ingrediente</h4>
+                                    <input type="text" name="ingredientes" id="input-nome-do-ingrediente-mb"
+                                        placeholder="Farinha de trigo">
+                                    <section id="coiso-pra-deixar-certo-mb">
+                                        <section id="quantidade-elementos-mb">
+                                            <h4 id="nome-do-ingrediente-mb">Quantidade/Peso</h4>
+                                            <input type="text" id="input-quantidade-do-ingrediente-mb" placeholder="01"
+                                                name="quantidade_ingredientes">
+                                        </section>
+                                        <section id="guardar-medidas-elementos-mb">
+                                            <h4 id="nome-do-ingrediente-mb">Medida</h4>
+                                            <select id="medidas-elementos-mb" name="medida_ingredientes">
+                                                <option value="Nenhuma medida" class="item-medidas">Nenhuma medida
+                                                </option>
+                                                <option value="Unidade" class="item-medidas">Unidade</option>
+                                                <option value="Xícara" class="item-medidas">Xícara</option>
+                                                <option value="Colher de sopa" class="item-medidas">Colher de sopa
+                                                </option>
+                                                <option value="Colher de chá" class="item-medidas">Colher de chá
+                                                </option>
+                                                <option value="Copo americano" class="item-medidas">Copo americano
+                                                </option>
+                                                <option value="Gramas (gr)" class="item-medidas">Gramas (gr)</option>
+                                                <option value="Quilogramas (kg)" class="item-medidas">Quilogramas (kg)
+                                                </option>
+                                                <option value="Mililitros (ml)" class="item-medidas">Mililitros (ml)
+                                                </option>
+                                                <option value="Litros (L)" class="item-medidas">Litros (L)</option>
+                                            </select>
+                                        </section>
+                                    </section>
+                                    <section id="linha-rosa-ingredientes-mb">
+                                        <h2 id="numero-do-ingrediente-mb">1</h2>
+                                    </section>
+                            </article>
+                        </section>
+                        <section id="tudo-dos-clones-mb">
+                            <article id="linhas-roxa-conteudo-mb">
+                                <section id="titulo-texto-modo-mb">
+                                    <h2 id="modo-de-preparo-titulo-mb">MODO DE PREPARO</h2>
+                                    <h4 id="passo-a-passo-modo-mb">Passo a passo</h4>
+                                </section>
+                                <section id="botoes-de-tirar-colocar-mb">
+                                    <img id="botao-de-add-modo-mb" src="/imagens/adicionar-ingrediente.svg"
+                                        onclick="duplicarDivModombmb()">
+                                </section>
+                                <section id="modo-de-preparo-mb">
+                                    <span id="arruma-numero-simbolo-mb">
+                                        <input type="text" id="numero-do-modo-de-preparo-mb" placeholder="1"
+                                            disabled="disabled">
+                                        <h2 id="simbolo-do-numero-mb">º</h2>
+                                    </span>
+                                    <input type="text" name="etapas_modo_preparo" id="input-modo-de-preparo-mb"
+                                        placeholder="Misture todos os ingredientes...">
+                                    <button id="apagar-modo-de-preparo-mb" type="button"
+                                        style="display:none;">X</button>
+                                </section>
+                            </article>
+                        </section>
+                    </section>
+                </article>
+
+                <article class="tarefa-mb" id="conteudoTarefa3-mb">
+                    <h3 id="midias-mb">Mídias</h3>
+                    <input type="file" id="files-mb" accept="image/*" multiple style="display: none;"
+                        name="imagem_criar_post">
+                    <section id="esqueleto-midias-mb">
+                        <h1 id="adicione-midias-mb">ADICIONE IMAGENS E VÍDEOS À SUA DICA!</h1>
+                        <section id="retangulo-adicionar-midia-mb">
+                            <img src="/imagens/mais-rosa.svg" alt="adicionar mídia" id="mais-adicionar-midia-mb">
+                        </section>
+                        <section class="midia-adicionada-retangulo-mb" id="midia-adicionada-retangulo-mb"></section>
+                    </section>
+                    <section id="result-mb"></section>
+                </article>
+            </nav>
+        </section>
+    </form>
+
+</main>

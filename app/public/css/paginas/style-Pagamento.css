@@ -1,0 +1,220 @@
+
+.mapa-do-site-pagamento{
+    display: flex;
+    margin-top: 18vh;
+}
+.mapa_do_site-link2{
+    font-family: Fira Sans;
+    color: black;
+    margin-right: 0.5vh;
+}
+
+.seta-mapa{
+    font-family: Fira Sans;
+    color: black;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+.sections-pagamento-grupo{
+    justify-content: center;
+    display: flex;
+    gap: 2.5vh;
+    width: 100%;
+    margin-top: 3vh;
+    align-items: flex-start;
+}
+.section-pagamento{
+    display: flex;
+    border: solid 2px #8541e9;
+    background-color: #f2f2f2;
+    width: 43vh;
+    border-radius: 20px;
+    flex-direction: column;
+}
+.titulo-section-pagamento{
+    display: flex;
+    padding: 2.5vh;
+    width: 88%;
+    justify-content: left;
+    gap: 2.5vh;
+    background-color: #e6e6e6;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.imagem-titulo-pagamento{
+    width: 5vh;
+    display: flex;
+}
+.h1-titulo-pagamento, .p-valorTotal{
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2vh;
+    display: flex;
+    color: #333333;
+    align-items: center;
+}
+.conteudo-article-pagamento{
+    display: flex;
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2vh;
+    color: #333333;
+    padding-top: 3vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+    padding-bottom: 3vh;
+}
+
+/* CONTEUDO */
+.valorTotal-produtos-pagamento{
+    display: flex;
+    padding: 2.5vh;
+    width: 88%;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* DADOS CADASTRAIS */
+.dadosCadastrais-pagamento{
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    padding: 2vh;
+    width: 90%;
+}
+.button-dadosCadastrais{
+    border: none;
+    background-color: none;
+    font-family: Fira Sans;
+    font-weight: 400;
+    font-size: 1.8vh;
+    text-decoration: underline;
+    color: #333333;
+    margin-bottom: 2vh;
+}
+.h3-dadosCadastrais, .p-dadosCadastrais{
+    font-family: Fira Sans;
+    font-size: 2vh;
+    color: #333333;
+}
+.h3-dadosCadastrais{
+    font-weight: 700;
+}
+.p-dadosCadastrais{
+    font-weight: 500;
+}
+
+/* METODOS DE PAGAMENTO */
+.conteudo-article-pagamento{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.radio-label-pagamentos{
+    width: 88%;
+    height: 3vh;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    border: 2px solid #d5d5d5;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh;
+}
+.article-label-pagamento{
+    display: flex;
+}
+.img-metodo-pagamento{
+    width: 4vh;
+    display: flex;
+    opacity: 50%;
+}
+.p-metodo-pagamento{
+    font-family: Fira Sans;
+    font-size: 2vh;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    margin-left: 2vh;
+}
+.figure-input-label-pagamento{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    background-color: #d5d5d5;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transform: translate(2.1vh, 0vh);
+}
+.radio-input-pagamentos{
+    display: flex;
+}
+.selected {
+    border-color: #8541e9;
+}
+
+.selected .figure-input-label-pagamento {
+    background-color: #8541e9;
+}
+.selected .figure-input-label-pagamento img{
+    opacity: 100%;
+}
+
+/* BOTOES CANCELAR / PROSSEGUIR PAGAMENTO */
+.section-botoes-pagamento{
+    width: 100%;
+    bottom: 7vh;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+}
+.article-checkbox-pagamento{
+    position: absolute;
+    right: 34.5vh;
+    bottom: 13vh;
+    background-color: #f2f2f2;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 2vh;
+    width: 30vh;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.22);
+}
+.article-checkbox-pagamento label{
+    font-size: 1.8vh;
+    font-family: Fira Sans;
+    font-weight: 500;
+}
+.article-botoes-pagamento{
+    display: flex;
+    background-color: #f2f2f2;
+    width: 135vh;
+    border-radius: 20px;
+    padding: 2vh;
+    justify-content: space-between;
+}
+.article-botoes-pagamento button{
+    height: 6vh;
+    width: 35vh;
+    font-family: Fira Sans;
+    font-size: 2vh;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+.button-cancelar-pagamento{
+    border-radius: 10px;
+    background-color: #9b9b9b;
+    color: white;
+}
+.button-prosseguir-pagamento{
+    border-radius: 20px;
+    background-color: #8541e9;
+    color: white;
+}

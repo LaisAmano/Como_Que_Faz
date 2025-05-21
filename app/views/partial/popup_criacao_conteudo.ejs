@@ -1,0 +1,327 @@
+<section class="CRIAR-dispositivo-mobile" id="criar">
+   <aside class="floating-smoke">
+      <article class="floating">
+
+         <section class="floating-main">
+            <i class="material-icons">add</i>
+         </section>
+
+         <section class="float-opt opt-text">
+            <a href="/criar-postagem">
+               <img src="/imagens/editar_icon.svg" alt="criar uma dica">
+            </a>
+         </section>
+
+         <section class="float-opt opt-media">
+            <a href="/criar-pergunta">
+               <img src="/imagens/feedback_icon.svg" alt="criar uma pergunta">
+            </a>
+         </section>
+
+      </article>
+   </aside>
+</section>
+
+<section class="CRIAR-dispositivo-desktop" id="criar">
+   <aside class="floating-smoke">
+      <article class="floating">
+
+         <section class="floating-main">
+            <i class="material-icons">add</i>
+         </section>
+
+         <section class="float-opt opt-text" id="open-modal">
+            <img src="/imagens/editar_icon.svg" alt="criar uma dica">
+         </section>
+         <span class="descricao_criar">Criar uma Dica</span>
+
+         <section class="float-opt opt-media" id="open-pergunta">
+            <img src="/imagens/feedback_icon.svg" alt="criar uma pergunta">
+         </section>
+         <span class="descricao_criar">Fazer uma pergunta</span>
+
+      </article>
+   </aside>
+
+   <!-- POP-UP CRIAR POSTAGEM -->
+   <figure id="fade-atras-cp" class="hidden">
+      <article id="modal-criar-post" class="hidden">
+         <section class="modal-header">
+            <figure class="modal-header-figure">
+               <img src="/imagens-svg/4-PopUp/gato-preenchido-roxo.svg" alt="icon gato criar dica" id="gato-criar-post">
+               <h2 id="criar-post-titulo">CRIAR DICA</h2>
+            </figure>
+            <figure id="close-modal-criar-post">X</figure>
+         </section>
+
+         <form action="/criar-dica" method="post" enctype="multipart/form-data">
+            <section id="criar-post-etapas">
+               <aside class="linha-baixo">
+                  <figure class="linha-progresso" id="progresso"></figure>
+               </aside>
+               
+               <input type="hidden" name="pergunta_id" id="pergunta_id">
+
+               <aside class="lista-tarefas">
+                  <button class="tarefa ativo" id="detalhes">
+                     <figure id="numero-do-elemento" class="detalhes-numero">1</figure>
+                     <p>Detalhes</p>
+                  </button>
+                  <hr class="bolinhas-atras">
+                  <button class="tarefa" id="elementos">
+                     <figure id="numero-do-elemento" class="elementos-numero">2</figure>
+                     <p>Elementos</p>
+                  </button>
+                  <hr class="bolinhas-atras">
+                  <button class="tarefa" id="midias">
+                     <figure id="numero-do-elemento" class="midias-numero">3</figure>
+                     <p>Mídias</p>
+                  </button>
+               </aside>
+
+               <article id="agrupamento-conteudo">
+                  <section class="conteudo conteudo1" id="conteudoTarefa1">
+                     <h2 id="titulo-detalhes">DETALHES</h2>
+                     <input type="text" id="input-titulo-da-postagem" maxlength="100" placeholder="TÍTULO DA POSTAGEM*"
+                        name="dica_titulo" required>
+                     <span id="b-titulo-da-postagem">0/300</span>
+                     <section id="select-tempo-resultado-inline">
+
+                        <figure class="guarda-select">
+                           <input class="dialogoselect" id="dialogoselect" type="text" name="dica_categoria"
+                              onfocus="dropdown(0)" onblur="dropdown(1)" placeholder="CATEGORIA DA POSTAGEM*"
+                              readonly="readonly" required>
+
+                           <div class="dropDown" id="dropdown" style="z-index: 1000; display: none;">
+                              <div class="listDropDown">
+                                 <div value="culinaria-categoria" class="item-select-detalhes texto"
+                                    id="item-select-detalhes-1" onmousedown="category(1)">Culinária
+                                 </div>
+
+                                 <div class="item-select-detalhes texto" id="item-select-detalhes-2"
+                                    onmousedown="category(2)">Limpeza</div>
+                                    
+                                 <div class="item-select-detalhes texto" id="item-select-detalhes-3"
+                                    onmousedown="category(3)">Bem Estar</div>
+                              </div>
+                           </div>
+                        </figure>
+
+                        <figure id="tempo-detalhes">
+                           <img id="imagem-tempo-detalhes" src="/imagens-svg/4-PopUp/tempo-cor-cinza.svg"
+                              alt="tempo de execução">
+                           <input type="text" id="horas-tempo-detalhes" maxlength="2" placeholder="00" min="0" max="99"
+                              name="dica_tempo_horas">H
+                           <input type="text" id="horas-tempo-detalhes" maxlength="2" placeholder="00" min="0" max="60"
+                              name="dica_tempo_minutos">MIN
+                        </figure>
+
+                        <figure id="tempo-detalhes-porcoes">
+                           <img id="imagem-tempo-detalhes-porcoes"
+                              src="/imagens-svg/4-PopUp/porçoes-cinza-culinaria.svg" alt="porcoes de execução">
+                           <input type="number" id="horas-tempo-detalhes" maxlength="3" max="100" placeholder="00"
+                              min="0" name="dica_porcoes">PORÇÕES*
+                        </figure>
+                     </section>
+
+                     <section id="descricao-subcategorias">
+                        <figure id="descricao-detalhes-total">
+                           <h3 id="titulo-descricao-detalhes">DESCRIÇÃO*</h3>
+                           <textarea id="descricao-detalhes" name="dica_descricao" cols="30" rows="10"
+                              maxlength="300" required></textarea>
+                           <span id="b-descricao-detalhes">0/300</span>
+                        </figure>
+                        
+                        <section id="subcategoria-detalhes-total">
+                           <h3 id="titulo-subcategoria-detalhes">SUBCATEGORIAS</h3>
+                           <figure class="input-container">
+                              <input type="text" id="input-text-subcategoria" name="dica_subcategorias_input">
+                              <img src="/imagens/adicionar-etiqueta.svg" id="icon" onclick="adicionarMensagem()"
+                                 alt="adicionar uma Subcategoria">
+                           </figure>
+                           <figure id="messageList" class="message-list"></figure>
+                           <!-- Campo oculto para enviar as subcategorias como uma lista separada por vírgulas -->
+                           <input type="hidden" id="dica_subcategorias" name="dica_subcategorias">
+                        </section>
+                     </section>
+                  </section>
+
+                  <section class="conteudo conteudo2" id="conteudoTarefa2">
+                     <h2 id="titulo-elementos">ELEMENTOS & PASSO A PASSO</h2>
+                     <section class="conteudo-elementos-passoapasso">
+                        <section id="clonados-ou-nao">
+                           <article class="conteudo-ingriedente">
+                              <article class="titulo-itens-adicionar">
+                                 <h2 id="titulo-ingredientes-elementos">ITENS NECESSÁRIOS</h2>
+                                 <button type="button" onclick="adicionarIngrediente()"
+                                    class="button-add-ingrediente">+</button>
+                              </article>
+                              <article class="ingredientes-e-botao">
+                                 <div id="ingredientes-div">
+
+                                 </div>
+                              </article>
+                           </article>
+                        </section>
+                        <section id="tudo-dos-clones">
+                           <section id="linhas-roxa-conteudo">
+                              <article class="titulo-passoapasso-adicionar">
+                                 <div id="titulo-texto-modo">
+                                    <h2 id="modo-de-preparo-titulo">PASSO A PASSO</h2>
+                                 </div>
+                                 <div id="botoes-de-tirar-colocar">
+                                    <button type="button" onclick="adicionarEtapa()">+</button>
+                                 </div>
+                              </article>
+                              <div id="modo-de-preparo">
+                                 <!--  -->
+                              </div>
+                           </section>
+                        </section>
+                     </section>
+                  </section>
+
+                  <section class="conteudo conteudo3" id="conteudoTarefa3">
+                     <h2 id="titulo-midias">MÍDIAS</h2>
+                     <input type="file" id="imagem_criar_post" name="imagem_criar_post" style="display: none;"
+                        required>
+                     <figure id="esqueleto-midias">
+                        <h1 id="adicione-midias">ADICIONE IMAGENS E VÍDEOS À SUA POSTAGEM!*</h1>
+                        <figure id="retangulo-adicionar-midia">
+                           <img src="/imagens/mais-rosa.svg" alt="adicionar mídia" id="mais-adicionar-midia">
+                        </figure>
+                        <figure id="fundo-midias"></figure>
+                        <figure id="result"></figure>
+                     </figure>
+                  </section>
+
+                  <script>
+                     if (window.File && window.FileList && window.FileReader) {
+                        var filesInput = document.getElementById("imagem_criar_post");
+                        var output = document.getElementById("result");
+                        var retanguloAdicionarMidia = document.getElementById("retangulo-adicionar-midia");
+
+                        retanguloAdicionarMidia.addEventListener("click", function () {
+                           filesInput.click();
+                        });
+
+                        filesInput.addEventListener("change", function (event) {
+                           const files = event.target.files;
+                           output.innerHTML = '';
+
+                           Array.from(files).forEach(file => {
+                              if (!file.type.match('image')) return;
+
+                              var picReader = new FileReader();
+
+                              picReader.addEventListener("load", function (event) {
+                                 var picFile = event.target;
+                                 var thumbnailContainer = document.createElement("div");
+                                 thumbnailContainer.className = "thumbnail-container";
+
+                                 var closeButton = document.createElement("span");
+                                 closeButton.className = "close-button";
+                                 closeButton.innerHTML = "X";
+                                 closeButton.addEventListener("click", function () {
+                                    thumbnailContainer.remove();
+                                 });
+
+                                 var thumbnail = document.createElement("img");
+                                 thumbnail.className = 'thumbnail';
+                                 thumbnail.src = picFile.result;
+                                 thumbnail.title = picFile.name;
+                                 thumbnail.style.width = '500';
+                                 thumbnail.style.margin = '10px';
+
+                                 thumbnailContainer.appendChild(thumbnail);
+                                 thumbnailContainer.appendChild(closeButton);
+                                 output.appendChild(thumbnailContainer);
+                              });
+
+                              picReader.readAsDataURL(file);
+                           });
+                        });
+                     } else {
+                        console.log("Your browser does not support File API");
+                     }
+                  </script>
+               </article>
+
+               <nav id="botoes-criar-post">
+                  <button id="btnVoltar" class="Voltar" type="button">VOLTAR</button>
+                  <button id="btnAvancar" class="Avancar">PRÓXIMA ETAPA...</button>
+               </nav>
+            </section>
+         </form>
+      </article>
+   </figure>
+   <!-- FINAL POP-UP CRIAR POSTAGEM -->
+
+   <!-- POP-UP PERGUNTA -->
+   <figure id="fade-pergunta" class="hide">
+      <article id="modal-pergunta" class="hide">
+         <section class="modal-header-pergunta">
+            <img src="/imagens-svg/4-PopUp/gato-preenchido-roxo.svg" alt="icon gato criar pergunta"
+               id="gato-criar-post">
+            <h2 id="criar-pergunta-titulo">CRIAR PERGUNTA</h2>
+            <figure class="fechar-pergunta" id="close-modal-pergunta">X</figure>
+         </section>
+         
+         <form action="/criar-pergunta" method="post">
+            <section class="modal-body-pergunta">
+               <!-- ADICIONAR AQUI O CONTEUDO DO PERGUNTAR -->
+
+               <section class="alinhamento-da-pergunta">
+                  <figure id="linha-colorida-pgt"></figure>
+                  <input type="text" maxlength="100" id="input-titulo-da-pergunta" placeholder="DESCREVA SUA PERGUNTA*"
+                     name="pergunta_titulo" required>
+
+                  <section class="guarda-select-perguntar">
+                     <input class="dialogoselect-perguntar-categoria" id="dialogoselect-perguntar-categoria" type="text"
+                        name="pergunta_categoria" onfocus="dropdownpergunta(0)" onblur="dropdownpergunta(1)"
+                        placeholder="CATEGORIA DA PERGUNTA*" readonly="readonly" required>
+                     <figure class="dropdown-perguntar-categoria" style="z-index: 1000;">
+                        <figure class="listdropdown-perguntar-categoria">
+                           <option value="categoria-culinaria" class="item-perguntar-categoria"
+                              id="item-perguntar-categoria-1" onmousedown="perguntar(1)">Culinária</option>
+                           <option value="categoria-limpeza" class="item-perguntar-categoria"
+                              id="item-perguntar-categoria-2" onmousedown="perguntar(2)">Limpeza</option>
+                           <option value="categoria-bemestar" class="item-perguntar-categoria"
+                              id="item-perguntar-categoria-3" onmousedown="perguntar(3)">Bem Estar</option>
+                        </figure>
+                     </figure>
+                  </section>
+
+                  <section id="descricao-subcategorias">
+                     <!-- <section id="subcategoria-detalhes-total-pgt">
+                           <h3 id="titulo-subcategoria-detalhes">SUBCATEGORIAS</h3>
+                           <figure class="input-container">
+                              <input type="text" id="input-text-subcategoria-pgt">
+                              <img src="/imagens/adicionar-etiqueta.svg" id="icon-adicionar-pgt" onclick="adicionarMensagempgt()"
+                                 alt="adicionar uma Subcategoria">
+                           </figure>
+                           <figure id="messageListpgt" class="message-list-pgt">
+                           </figure>
+                        </section> -->
+
+                     <figure id="descricao-detalhes-total-pgt">
+                     </figure>
+                  </section>
+               </section>
+
+               <figure class="botoes-criar-pergunta">
+                  <button class="botao-cancelar-criar-pergunta" id="close-modal-pergunta"
+                     type="button">Cancelar</button>
+                  <button class="botao-publicar-criar-pergunta" id="close-modal-pergunta"
+                     type="submit">Publicar</button>
+               </figure>
+
+            </section>
+         </form>
+      </article>
+   </figure>
+   <!-- FINAL POP-UP PERGUNTA -->
+</section>
+
+
+<script src="../js/criar_conteudo/script-botao-criar.js"></script>

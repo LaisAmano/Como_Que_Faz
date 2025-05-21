@@ -1,0 +1,830 @@
+@media only screen and (min-width: 601px) {
+  .postagens {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 4vh;
+    width: 133vh;
+  }
+
+  /* Postagem individual - Início */
+  .postagem {
+    width: 41.5vh;
+    align-self: flex-start;
+    cursor: pointer;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .usuario-foto-nome {
+    display: inline-flex;
+    gap: 1vh;
+    align-items: center;
+    max-width: fit-content;
+  }
+
+  .usuario-foto-nome:hover {
+    background-color: #9d5fef11;
+    padding: 1vh 2vh 1vh 1vh;
+    border-radius: 10px;
+  }
+
+  #img-usuario-post,
+  #img-login_hover-post,
+  #img-login-post {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+  }
+
+  #img-login-post {
+    display: inline-block;
+  }
+
+  #img-login_hover-post {
+    position: absolute;
+    display: none;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-culinaria {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-limpeza {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-bemEstar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .titulo_post,
+  .postagem:hover .postagem_info_primeiro_plano {
+    display: none;
+  }
+
+  .postagem,
+  .pergunta {
+    transition: transform 0.3s ease;
+  }
+
+  .postagem:hover,
+  .pergunta:hover {
+    transform: translateY(-5px);
+  }
+
+  .postagem_info_primeiro_plano {
+    z-index: 1;
+  }
+
+  .postagem_parte_de_cima {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 1vh;
+    position: relative;
+  }
+
+  .titulo_post {
+    margin-right: 10vh;
+    font-size: 2.3vh;
+    width: 30vh;
+    font-family: Fira Sans;
+    color: white;
+    position: absolute;
+    padding-bottom: 1vh;
+    z-index: 2;
+  }
+
+  #icon-categoria-branco {
+    width: 4.5vh;
+    height: 4.5vh;
+    margin-right: 2vh;
+    position: absolute;
+    padding-bottom: 1vh;
+    z-index: 2;
+  }
+
+  .imagem-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .imagem-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 8vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  }
+
+  .imagem_postagem {
+    z-index: 0;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .patinhas-favoritar {
+    justify-content: space-between;
+    display: flex;
+    height: 4vh;
+  }
+
+  .patinha-indicador {
+    width: 3.5vh;
+    display: flex;
+  }
+
+  .patinha-indicador:hover+.span-patinha {
+    display: block;
+  }
+
+  .button-favoritar-feed {
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-favoritar-feed:hover {
+    opacity: 60%;
+  }
+
+  .span-favoritar {
+    background-color: #cb218c;
+    color: white;
+    font-family: Fira Sans Bold;
+    font-size: 1.8vh;
+    position: absolute;
+    display: none;
+    padding: 0.8vh;
+    border-radius: 10px;
+    transform: translate(22.5vh, -5vh);
+  }
+
+  .button-favoritar-feed:hover+.span-favoritar {
+    display: flex;
+  }
+
+  .span-patinha {
+    display: none;
+    position: absolute;
+    transform: translate(-1vh, -5vh);
+    font-family: Fira Sans Bold;
+    font-size: 1.8vh;
+    color: white;
+    background-color: #cb218c;
+    padding: 0.8vh;
+    border-radius: 10px;
+  }
+
+  .hover_ingredientes_basePost-culinaria,
+  .hover_ingredientes_basePost-limpeza,
+  .hover_ingredientes_basePost-bemEstar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: none;
+    z-index: 5;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-sizing: border-box;
+    padding: 2vh;
+  }
+
+  .hover_ingredientes_basePost-culinaria {
+    background-color: #cb1155a0;
+  }
+
+  .hover_ingredientes_basePost-limpeza {
+    background-color: #027de1a0;
+  }
+
+  .hover_ingredientes_basePost-bemEstar {
+    background-color: #00cd83a0;
+  }
+
+  .ingredientes_basePost {
+    color: white;
+    font-weight: 600f;
+    font-size: 2vh;
+    font-family: Fira Sans;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    text-align: center;
+  }
+
+  .legenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    width: 100%;
+  }
+
+  .legenda_relogio,
+  .legenda_estrela,
+  .legenda_partes {
+    display: flex;
+    align-items: center;
+    gap: 1.5vh;
+  }
+
+  .legenda img {
+    height: 3.5vh;
+  }
+
+  .legenda h3 {
+    font-family: Fira Sans;
+    font-size: 20px;
+    color: #333333ef;
+  }
+
+  .relogio h3 {
+    margin-left: 10px;
+  }
+
+  .estrela h3 {
+    margin-left: 10px;
+  }
+
+  .partes h3 {
+    margin-left: 10px;
+  }
+
+  .hover-post {
+    display: none;
+    background-color: #cb215483;
+    width: 305px;
+    height: 338px;
+    position: absolute;
+    margin-top: -380px;
+    border-radius: 10px 10px 0 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hover-post h3 {
+    color: white;
+    font-family: Fira Sans;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 125px;
+    margin-right: 0;
+  }
+
+  .postagem:hover+.hover-post {
+    display: block;
+    transition: 1s;
+  }
+
+  .postagem:hover+.info-cima-post {
+    display: none;
+  }
+
+  .postagem:hover+.info-cima-post {
+    display: none;
+  }
+
+  /* Postagem individual - Fim */
+
+
+  /* Pergunta individual - Inicio */
+  .pergunta {
+    width: 41.5vh;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .pergunta:hover .parte-cima-pergunta {
+    background-color: #d9d9d9;
+  }
+
+  .pergunta:hover .texto-pergunta {
+    font-size: 2.1vh;
+  }
+
+  .parte-cima-pergunta {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2.5vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .nome-usuario-pergunta-culinaria,
+  .nome-usuario-pergunta-limpeza,
+  .nome-usuario-pergunta-bemestar {
+    font-size: 1.7vh;
+    font-family: Fira Sans Bold;
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+  }
+
+  .nome-usuario-pergunta-culinaria {
+    color: #CB1154;
+  }
+
+  .nome-usuario-pergunta-limpeza {
+    color: #027de1;
+  }
+
+  .nome-usuario-pergunta-bemestar {
+    color: #00cd83;
+  }
+
+  .texto-pergunta {
+    font-family: Fira Sans;
+    color: #333333;
+    font-size: 2vh;
+    font-weight: 600;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .parte-baixo-pergunta {
+    display: flex;
+    padding: 1vh;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 5vh;
+  }
+
+  .figureCulinaria {
+    background-color: #CB1154;
+  }
+
+  .figureLimpeza {
+    background-color: #027de1;
+  }
+
+  .figureBemEstar {
+    background-color: #00cd83;
+  }
+
+  .pergunta-categoria,
+  .patinhas {
+    display: flex;
+    gap: 1vh;
+  }
+
+  .pergunta-categoria img,
+  .patinhas img {
+    width: 3vh;
+    height: 3vh;
+  }
+
+  .pergunta-categoria p,
+  .patinhas p {
+    font-family: Fira Sans;
+    color: white;
+    font-size: 20px;
+    margin-top: 0.2vh;
+    font-weight: 600;
+  }
+
+  /* Pergunta individual - Fim */
+
+
+  /* Paginador - Inicio */
+  .notificador {
+    display: grid;
+  }
+
+  /* Paginador - Fim */
+
+}
+
+@media only screen and (max-width: 600px) {
+  .postagens {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1vh;
+    width: 97vw;
+    padding-left: 3vw;
+  }
+
+  /* Postagem individual - Início */
+  .postagem {
+    width: 46vw;
+    align-self: flex-start;
+    cursor: pointer;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .usuario-foto-nome {
+    display: inline-flex;
+    gap: 1vh;
+    align-items: center;
+    max-width: fit-content;
+  }
+
+  .usuario-foto-nome:hover {
+    background-color: #9d5fef11;
+    padding: 1vh 2vh 1vh 1vh;
+    border-radius: 10px;
+  }
+
+  #img-usuario-post,
+  #img-login_hover-post,
+  #img-login-post {
+    width: 4vw;
+    border-radius: 50%;
+  }
+
+  #img-login-post {
+    display: inline-block;
+  }
+
+  #img-login_hover-post {
+    position: absolute;
+    display: none;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-culinaria {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-limpeza {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .hover_ingredientes_basePost-bemEstar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postagem:hover .titulo_post,
+  .postagem:hover .postagem_info_primeiro_plano {
+    display: none;
+  }
+
+  .postagem,
+  .pergunta {
+    transition: transform 0.3s ease;
+  }
+
+  .postagem:hover,
+  .pergunta:hover {
+    transform: translateY(-5px);
+  }
+
+  .postagem_info_primeiro_plano {
+    z-index: 1;
+  }
+
+  .postagem_parte_de_cima {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 1vh;
+    position: relative;
+  }
+
+  .titulo_post {
+    margin-right: 9vw;
+    font-size: 3vw;
+    width: 34vw;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    position: absolute;
+    padding-bottom: 1vw;
+    z-index: 2;
+  }
+
+  #icon-categoria-branco {
+    width: 6vw;
+    height: 6vw;
+    margin-right: 2vw;
+    position: absolute;
+    padding-bottom: 1vw;
+    z-index: 2;
+  }
+
+  .imagem-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .imagem-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 8vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  }
+
+  .imagem_postagem {
+    z-index: 0;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .patinhas-favoritar {
+    justify-content: space-between;
+    display: flex;
+    height: 6vw;
+  }
+
+  .patinha-indicador {
+    width: 6vw;
+    display: flex;
+  }
+
+  .patinha-indicador:hover+.span-patinha {
+    display: block;
+  }
+
+  .button-favoritar-feed {
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-favoritar-feed:hover {
+    opacity: 60%;
+  }
+
+  .span-favoritar {
+    background-color: #cb218c;
+    color: white;
+    font-family: Fira Sans Bold;
+    font-size: 3vw;
+    position: absolute;
+    display: none;
+    padding: 0.8vh;
+    border-radius: 10px;
+    transform: translate(22.5vh, -5vh);
+  }
+
+  .button-favoritar-feed:hover+.span-favoritar {
+    display: flex;
+  }
+
+  .span-patinha {
+    display: none;
+    position: absolute;
+    transform: translate(-1vh, -5vh);
+    font-family: Fira Sans Bold;
+    font-size: 1.8vh;
+    color: white;
+    background-color: #cb218c;
+    padding: 0.8vh;
+    border-radius: 10px;
+  }
+
+  .hover_ingredientes_basePost-culinaria,
+  .hover_ingredientes_basePost-limpeza,
+  .hover_ingredientes_basePost-bemEstar {
+    position: absolute;
+    width: 46vw;
+    height: 100%;
+    justify-content: center;
+    display: none;
+    z-index: 5;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-sizing: border-box;
+    padding: 2vw;
+  }
+
+  .hover_ingredientes_basePost-culinaria {
+    background-color: #cb1155a0;
+  }
+
+  .hover_ingredientes_basePost-limpeza {
+    background-color: #027de1a0;
+  }
+
+  .hover_ingredientes_basePost-bemEstar {
+    background-color: #00cd83a0;
+  }
+
+  .ingredientes_basePost {
+    width: 45vw;
+    color: white;
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: Fira Sans;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin-right: 12vw;
+  }
+
+  .legenda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    width: 45vw;
+  }
+
+  .legenda_relogio,
+  .legenda_estrela,
+  .legenda_partes {
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+  }
+
+  .legenda img {
+    height: 3vw;
+  }
+
+  .legenda h3 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3vw;
+    color: #333333ef;
+  }
+
+  .relogio h3 {
+    margin-left: 10px;
+  }
+
+  .estrela h3 {
+    margin-left: 10px;
+  }
+
+  .partes h3 {
+    margin-left: 10px;
+  }
+
+  .hover-post {
+    display: none;
+    background-color: #cb215483;
+    width: 305px;
+    height: 338px;
+    position: absolute;
+    margin-top: -380px;
+    border-radius: 10px 10px 0 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hover-post h3 {
+    color: white;
+    font-family: Fira Sans;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 125px;
+    margin-right: 0;
+  }
+
+  .postagem:hover+.hover-post {
+    display: block;
+    transition: 1s;
+  }
+
+  .postagem:hover+.info-cima-post {
+    display: none;
+  }
+
+  .postagem:hover+.info-cima-post {
+    display: none;
+  }
+
+  /* Postagem individual - Fim */
+
+
+  /* Pergunta individual - Inicio */
+  .pergunta {
+    width: 46vw;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .pergunta:hover .parte-cima-pergunta {
+    background-color: #d9d9d9;
+  }
+
+  .pergunta:hover .texto-pergunta {
+    font-size: 2.1vh;
+  }
+
+  .parte-cima-pergunta {
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 2vh;
+    padding-bottom: 2.5vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .nome-usuario-pergunta-culinaria,
+  .nome-usuario-pergunta-limpeza,
+  .nome-usuario-pergunta-bemestar {
+    font-size: 1.7vh;
+    font-family: Fira Sans Bold;
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+  }
+
+  .nome-usuario-pergunta-culinaria {
+    color: #CB1154;
+  }
+
+  .nome-usuario-pergunta-limpeza {
+    color: #027de1;
+  }
+
+  .nome-usuario-pergunta-bemestar {
+    color: #00cd83;
+  }
+
+  .texto-pergunta {
+    font-family: Fira Sans;
+    color: #333333;
+    font-size: 3vw;
+    font-weight: 600;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  .parte-baixo-pergunta {
+    display: flex;
+    padding: 1vh;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 5vh;
+  }
+
+  .figureCulinaria {
+    background-color: #CB1154;
+  }
+
+  .figureLimpeza {
+    background-color: #027de1;
+  }
+
+  .figureBemEstar {
+    background-color: #00cd83;
+  }
+
+  .pergunta-categoria,
+  .patinhas {
+    display: flex;
+    gap: 1vh;
+  }
+
+  .pergunta-categoria img,
+  .patinhas img {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .pergunta-categoria p,
+  .patinhas p {
+    font-family: Fira Sans;
+    color: white;
+    font-size: 3vw;
+    margin-top: 0.2vh;
+    font-weight: 600;
+  }
+
+  /* Pergunta individual - Fim */
+
+
+  /* Paginador - Inicio */
+  .notificador {
+    display: grid;
+  }
+
+  /* Paginador - Fim */
+
+}

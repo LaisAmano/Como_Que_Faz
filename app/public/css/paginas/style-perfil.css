@@ -1,0 +1,852 @@
+@media only screen and (max-width: 600px) {
+
+  .mapa-do-site {
+    display: flex;
+    margin-left: 1vh;
+  }
+
+  .mapa-do-site p {
+    font-family: Fira Sans;
+  }
+
+  .mapa-1 {
+    text-decoration: underline;
+    margin-right: 7px;
+  }
+
+  .mapa-2 {
+    text-decoration: underline;
+    font-weight: Bold;
+    color: #9e5fef;
+  }
+
+  .seta-mapa {
+    margin-right: 7px;
+  }
+
+  .perfil-cima {
+    margin: auto;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    margin-top: 2vh;
+  }
+
+  .gato-esticado {
+    position: absolute;
+    width: 100%;
+    align-self: center;
+  }
+
+  .foto-perfil_editar-perfil {
+    justify-content: space-between;
+    display: flex;
+    padding-top: 10vh;
+    padding-left: 3vh;
+    padding-right: 4vh;
+  }
+
+  .foto-de-perfil-fundo {
+    display: flex;
+    width: 15.3vh;
+    height: 15.3vh;
+    z-index: 2;
+  }
+
+  .fundo-foto-perfil {
+    width: 15.5vh;
+    position: absolute;
+  }
+
+  .foto-perfil {
+    width: 13.5vh;
+    position: absolute;
+    padding: 0.9vh;
+    border-radius: 50%;
+    height: 13.5vh;
+  }
+
+  .editar-perfil,
+  .seguir-perfil {
+    height: 4vh;
+    border-radius: 12px;
+    border: #cb218c 2px solid;
+    color: #cb218c;
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2vh;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+    margin-top: 11vh;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+
+  .editar-perfil {
+    width: 18vh;
+    padding-left: 3vh;
+  }
+
+  .editar-perfil:hover,
+  .seguir-perfil:hover {
+    background-color: #cb218c;
+    color: white;
+  }
+
+  .seguir-perfil {
+    width: 15vh;
+    padding-left: 4.5vh;
+  }
+
+  .texto-perfil {
+    padding: 1vh 4vh 3vh 4vh;
+  }
+
+  .User1234 {
+    font-family: "Heavitas", sans-serif;
+    color: #cb218c;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .Nome1234 {
+    font-family: Fira Sans;
+    font-weight: 700;
+    color: #333333;
+    font-size: 20px;
+  }
+
+  .descricao-perfil {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 1.9vh;
+  }
+
+  .links-redes_sociais {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Fira Sans;
+    align-items: center;
+  }
+
+  .icon-link {
+    display: flex;
+    width: 2.5vh;
+    padding-right: 1vh;
+    cursor: pointer;
+  }
+
+  .site-perfil {
+    display: flex;
+    color: #cb218c;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Fira Sans;
+    padding: 0vh 0.7vh 0vh 0vh;
+    cursor: pointer;
+  }
+
+  .links-redes_sociais {
+    font-size: 1.8vh;
+    display: flex;
+  }
+
+  .link-site-perfil {
+    font-family: Fira Sans;
+    padding: 0vh 2vh 0vh 0vh;
+    cursor: pointer;
+  }
+
+  .url-site-perfil-a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .rede-social-perfil {
+    display: flex;
+    cursor: pointer;
+    padding: 0vh 2vh 0vh 2vh;
+  }
+
+  .seguidores-seguindo-dicas {
+    display: flex;
+    gap: 1vh;
+    margin-left: -3vh;
+  }
+
+  .seguidores-seguindo-dicas_figure {
+    border-radius: 12px;
+    background-color: #ffdcf2;
+    color: #cb218c;
+    font-family: Fira Sans;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    padding: 1vh 3vh 1vh 3vh;
+    max-width: 9vh;
+  }
+
+
+
+  /*perfil parte de baixo*/
+  .perfil-baixo {
+    display: flex;
+    margin-bottom: 10vh;
+  }
+
+  .postagens-perfil-baixo {
+    width: 100%;
+    background-color: #f9f9f9;
+    margin: 2.5vh auto auto auto;
+    border-top: 2px solid #cb218c;
+  }
+
+  .titulo-postagens-perfil {
+    font-family: Heavitas;
+    color: #cb218c;
+    font-weight: 700;
+    font-size: 2.3vh;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    border-bottom: 1px solid #b2b2b2;
+  }
+
+  .postagens-perfil {
+    justify-content: center;
+    display: flex;
+    padding: 3vh 0;
+  }
+
+  .gato-sem-rascunhos {
+    width: 35vh;
+    opacity: 0.59;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gato-sem-rascunhos-aviso-texto {
+    color: #333333;
+    font-family: Fira Sans;
+    font-weight: 700;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0vh, -7vh);
+    align-items: center;
+  }
+
+  /* EDITAR PERFIL */
+
+  #fundo-editar-perfil {
+    position: fixed;
+    background: #000000a3;
+    width: 100%;
+    height: 100%;
+    z-index: 299;
+    top: 0;
+    left: 0;
+  }
+
+  #editar-perfil-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 300;
+    width: 85%;
+    background-color: #f9f9f9;
+    display: flex;
+  }
+
+  .editar-perfil-sair {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: #4d16bb 1px solid;
+  }
+
+  .titulo-editar-perfil {
+    display: flex;
+    color: #4d16bb;
+    font-family: Heavitas;
+    font-size: 2vh;
+    margin: 3vh 0 2vh 3vh;
+  }
+
+  .xis-sair {
+    color: #4d16bb;
+    font-family: Heavitas;
+    font-size: 2vh;
+    cursor: pointer;
+    display: flex;
+    margin: 3vh 3vh 2vh 0;
+  }
+
+  .editar-informacoes-perfil {
+    padding: 3vh;
+  }
+
+  .banner-editar {
+    position: absolute;
+    width: 73vw;
+    height: 12vh;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .fotos-perfil-editar {
+    display: flex;
+    width: 13.3vh;
+    height: 13.3vh;
+    z-index: 2;
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 2vh;
+  }
+
+  .fundo-foto-editar {
+    width: 13.5vh;
+    position: absolute;
+  }
+
+  .foto-editar {
+    width: 11.5vh;
+    position: absolute;
+    padding: 0.9vh;
+    border-radius: 50%;
+    height: 11.5vh;
+  }
+
+  .editar-foto-camera {
+    width: 35px;
+  }
+
+  .camera-container {
+    position: relative;
+  }
+
+  .editar-foto-camera {
+    cursor: pointer;
+  }
+
+  .camera-input {
+    display: none;
+  }
+
+  #camera1 {
+    transform: translate(10vh, -3vh);
+    position: absolute;
+    z-index: 3;
+  }
+
+  #camera2 {
+    transform: translate(60vh, -9vh);
+    position: absolute;
+    z-index: 3;
+  }
+
+  .inputs-editar-perfil {
+    margin-top: 3vh;
+  }
+
+  .tit-editar {
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2.2vh;
+    margin-top: 2vh;
+    color: #4d16bb;
+  }
+
+  .tex-editar {
+    width: 100%;
+  }
+
+  .tex-editar,
+  .tex-editar-site,
+  .tex-editar-url {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid #333333;
+    height: 3vh;
+    margin-top: 0.5vh;
+    background: none;
+    font-family: Fira Sans;
+    font-size: 2.2vh;
+    outline: none;
+  }
+
+  .tex-editar-site {
+    width: 15vh;
+  }
+
+  .tex-editar-url {
+    width: 15vh;
+  }
+
+  .tit-duas-coluna {
+    justify-content: space-between;
+    display: flex;
+    gap: 3vh;
+  }
+
+  .tit-duas {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tex-editar::placeholder {
+    color: #333333;
+    font-family: Fira Sans;
+    outline: none;
+  }
+
+  .salvar {
+    background: #4d16bb;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 3vh;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+@media only screen and (min-width: 601px) {
+  .mapa-do-site {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 52vh;
+  }
+
+  .mapa-do-site p {
+    font-family: Fira Sans;
+  }
+
+  .mapa-1 {
+    text-decoration: underline;
+    margin-right: 7px;
+  }
+
+  .mapa-2 {
+    text-decoration: underline;
+    font-weight: Bold;
+    color: #9e5fef;
+  }
+
+  .seta-mapa {
+    margin-right: 7px;
+  }
+
+  .perfil-cima {
+    margin: auto;
+    width: 50vw;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    margin-top: 2vh;
+  }
+
+  .gato-esticado {
+    width: 50vw;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    z-index: 1;
+    height: 18vh;
+  }
+
+  .foto-perfil_editar-perfil {
+    justify-content: space-between;
+    display: flex;
+    padding-top: 10vh;
+    padding-left: 3vh;
+    padding-right: 4vh;
+  }
+
+  .foto-de-perfil-fundo {
+    display: flex;
+    width: 15.3vh;
+    height: 15.3vh;
+    z-index: 2;
+  }
+
+  .fundo-foto-perfil {
+    width: 15.5vh;
+    position: absolute;
+  }
+
+  .foto-perfil {
+    width: 13.5vh;
+    position: absolute;
+    padding: 0.9vh;
+    border-radius: 50%;
+    height: 13.5vh;
+  }
+
+  .editar-perfil,
+  .seguir-perfil {
+    height: 4vh;
+    border-radius: 12px;
+    border: #cb218c 2px solid;
+    color: #cb218c;
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2vh;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+    margin-top: 11vh;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+
+  .editar-perfil {
+    width: 18vh;
+    padding-left: 3vh;
+  }
+
+  .editar-perfil:hover,
+  .seguir-perfil:hover {
+    background-color: #cb218c;
+    color: white;
+  }
+
+  .seguir-perfil {
+    width: 15vh;
+    padding-left: 4.5vh;
+  }
+
+  .texto-perfil {
+    padding: 1vh 4vh 3vh 4vh;
+  }
+
+  .User1234 {
+    font-family: "Heavitas", sans-serif;
+    color: #cb218c;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .Nome1234 {
+    font-family: Fira Sans;
+    font-weight: 700;
+    color: #333333;
+    font-size: 20px;
+  }
+
+  .descricao-perfil {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 1.9vh;
+  }
+
+  .links-redes_sociais {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Fira Sans;
+    align-items: center;
+  }
+
+  .icon-link {
+    display: flex;
+    width: 2.5vh;
+    padding-right: 1vh;
+    cursor: pointer;
+  }
+
+  .site-perfil {
+    display: flex;
+    color: #cb218c;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: Fira Sans;
+    padding: 0vh 0.7vh 0vh 0vh;
+    cursor: pointer;
+  }
+
+  .links-redes_sociais {
+    font-size: 1.8vh;
+    display: flex;
+  }
+
+  .link-site-perfil {
+    font-family: Fira Sans;
+    padding: 0vh 2vh 0vh 0vh;
+    cursor: pointer;
+  }
+
+  .url-site-perfil-a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .rede-social-perfil {
+    width: 3vh;
+    display: flex;
+    cursor: pointer;
+    padding: 0vh 2vh 0vh 2vh;
+  }
+
+  .seguidores-seguindo-dicas {
+    display: flex;
+    gap: 2vh;
+    margin-top: 2vh;
+  }
+
+  .seguidores-seguindo-dicas_figure {
+    border-radius: 12px;
+    background-color: #ffdcf2;
+    color: #cb218c;
+    font-family: Fira Sans;
+    text-align: center;
+    align-items: center;
+    font-size: 2vh;
+    font-weight: 700;
+    display: flex;
+    padding: 0.8vh 4vh;
+  }
+
+
+  /*perfil parte de baixo*/
+  .perfil-baixo {
+    display: flex;
+    margin-bottom: 10vh;
+  }
+
+  .postagens-perfil-baixo {
+    width: 50vw;
+    background-color: #f9f9f9;
+    margin: 2.5vh auto auto auto;
+    border-top: 2px solid #cb218c;
+  }
+
+  .titulo-postagens-perfil {
+    font-family: Heavitas;
+    color: #cb218c;
+    font-weight: 700;
+    font-size: 2.3vh;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    border-bottom: 1px solid #b2b2b2;
+  }
+
+  .postagens-perfil {
+    justify-content: center;
+    display: flex;
+    padding: 3vh 7vh;
+  }
+
+  .gato-sem-rascunhos {
+    width: 35vh;
+    opacity: 0.59;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gato-sem-rascunhos-aviso-texto {
+    color: #333333;
+    font-family: Fira Sans;
+    font-weight: 700;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0vh, -7vh);
+    align-items: center;
+  }
+
+  /* EDITAR PERFIL */
+
+  #fundo-editar-perfil {
+    position: fixed;
+    background: #000000a3;
+    width: 100%;
+    height: 100%;
+    z-index: 299;
+    top: 0;
+    left: 0;
+  }
+
+  #editar-perfil-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 300;
+    width: 35vw;
+    background-color: #f9f9f9;
+    display: flex;
+  }
+
+  .editar-perfil-sair {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: #4d16bb 1px solid;
+  }
+
+  .titulo-editar-perfil {
+    display: flex;
+    color: #4d16bb;
+    font-family: Heavitas;
+    font-size: 2vh;
+    margin: 3vh 0 2vh 3vh;
+  }
+
+  .xis-sair {
+    color: #4d16bb;
+    font-family: Heavitas;
+    font-size: 2vh;
+    cursor: pointer;
+    display: flex;
+    margin: 3vh 3vh 2vh 0;
+  }
+
+  .editar-informacoes-perfil {
+    padding: 3vh;
+  }
+
+  .banner-editar {
+    position: absolute;
+    width: 32vw;
+    height: 12vh;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .fotos-perfil-editar {
+    display: flex;
+    width: 13.3vh;
+    height: 13.3vh;
+    z-index: 2;
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 2vh;
+  }
+
+  .fundo-foto-editar {
+    width: 13.5vh;
+    position: absolute;
+  }
+
+  .foto-editar {
+    width: 11.5vh;
+    position: absolute;
+    padding: 0.9vh;
+    border-radius: 50%;
+    height: 11.5vh;
+  }
+
+  .editar-foto-camera {
+    width: 35px;
+  }
+
+  .camera-container {
+    position: relative;
+  }
+
+  .editar-foto-camera {
+    cursor: pointer;
+  }
+
+  .camera-input {
+    display: none;
+  }
+
+  #camera1 {
+    transform: translate(10vh, -3vh);
+    position: absolute;
+    z-index: 3;
+  }
+
+  #camera2 {
+    transform: translate(60vh, -9vh);
+    position: absolute;
+    z-index: 3;
+  }
+
+  .inputs-editar-perfil {
+    margin-top: 3vh;
+  }
+
+  .tit-editar {
+    font-family: Fira Sans;
+    font-weight: 600;
+    font-size: 2.2vh;
+    margin-top: 2vh;
+    color: #4d16bb;
+  }
+
+  .tex-editar {
+    width: 100%;
+  }
+
+  .tex-editar,
+  .tex-editar-site,
+  .tex-editar-url {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.5px solid #333333;
+    height: 3vh;
+    margin-top: 0.5vh;
+    background: none;
+    font-family: Fira Sans;
+    font-size: 2.2vh;
+    outline: none;
+  }
+
+  .tex-editar-site {
+    width: 15vh;
+  }
+
+  .tex-editar-url {
+    width: 37vh;
+  }
+
+  .tit-duas-coluna {
+    justify-content: space-between;
+    display: flex;
+    gap: 3vh;
+  }
+
+  .tit-duas {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tex-editar::placeholder {
+    color: #333333;
+    font-family: Fira Sans;
+    outline: none;
+  }
+
+  .salvar {
+    background: #4d16bb;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 3vh;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+  }
+}

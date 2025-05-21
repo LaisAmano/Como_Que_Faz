@@ -1,0 +1,243 @@
+<body>
+    <main>
+        <section class="ajustments">
+            <section class="colu-1">
+                <h2 class="titulo-secoes">CONFIGURAÇÕES</h2>
+                <aside class="ajustbuttons">
+                    <button class="ajusttab" onclick="openContent(event, 'preferencies')" id="defaultOpen">Preferências
+                        e
+                        Notificações</button>
+                    <button class="ajusttab" onclick="openContent(event, 'account')">Conta e Segurança</button>
+                    <button class="ajusttab" onclick="openContent(event, 'mustaches')">Bigodes de Ouro e
+                        Pagamentos</button>
+                </aside>
+                <a href="/sair"><button class="sair-conta">Sair da Conta</button></a>
+            </section>
+            <section class="colu-2">
+                <section id="preferencies" class="ajustcontent">
+                    <article class="preferencies-notifications">
+                        <h2 class="title-aside">Preferencias e Notificações</h2>
+                        <article class="content-ajustments">
+                            <aside class="part-one">
+                                <h3>Idioma & Exibição</h3>
+                                <aside class="content-language">
+                                    <section class="languages">
+                                        <span>Idioma</span>
+                                        <select id="Idioma" class="lang">
+                                            <option value="Portugues">Português</option>
+                                        </select>
+                                    </section>
+                                    <!-- <span>Modo escuro</span> -->
+                                </aside>
+                            </aside>
+                            <aside class="part-two">
+                                <h3>Notificações / Newsletter</h3>
+                                <section class="content-newnot">
+                                    <aside class="first-part-nn">
+                                        <h4 class="title-newnot">Filtros de Notificação/Newsletter</h4>
+                                        <article class="notf-filters">
+                                            <aside class="notf-options">
+                                                <label for="vehicle1"><span> Curtidas</span></label><br>
+                                                <label for="vehicle2"><span> Comentários</span></label><br>
+                                                <label for="vehicle3"><span> Patinhas Recebidas</span></label><br>
+                                                <label for="vehicle3"><span> Novas Dicas de Seguindo</span></label><br>
+                                                <label for="vehicle3"><span> Novas Patinhas de
+                                                        Seguindo</span></label><br>
+                                            </aside>
+                                            <aside class="notf-checkbox">
+                                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                                            </aside>
+                                        </article>
+                                    </aside>
+                                    <article>
+                                        <h4 class="title-newnot">Preferencia de Notificação</h4>
+                                        <section class="prefnot-filters">
+                                            <aside>
+                                                <label for="vehicle1"><span> SMS</span></label><br>
+                                                <label for="vehicle2"><span> E-mail</span></label><br>
+                                            </aside>
+                                            <aside class="prefnot-checkbox">
+                                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                            </aside>
+                                        </section>
+                                    </article>
+                                </section>
+                            </aside>
+                        </article>
+                    </article>
+                </section>
+                <section id="account" class="ajustcontent">
+                    <article class="account-safety">
+                        <h2 class="title-aside">Conta e Segurança</h2>
+                        <article class="content-ajustments">
+                            <aside class="part-one">
+                                <!-- <header class="acc-information-form">
+                                    <h3>Informações da Conta</h3>
+                                    <button>
+                                        <img src="/imagens-svg/2-body/edit-acc-information-icon.svg" alt="Ícone de edição perfil">
+                                    </button>
+                                </header>
+                                <form action="">
+                                    <label for="uname">
+                                        <span>Nome de Usuário</span>
+                                    </label>
+                                    <input type="text" id="uname" name="uname" placeholder="Nome de Usuário"><br><br>
+                                    <label for="pnumber">
+                                        <span>Celular</span>
+                                    </label>
+                                    <input type="number" id="pnumber" name="pnumber" placeholder="Celular"><br><br>
+                                    <label for="email">
+                                        <span>Endereço de E-mail</span>
+                                    </label>
+                                    <input type="email" id="email" name="email"
+                                        placeholder="Endereço de E-mail"><br><br>
+                                    <label for="corigin">
+                                        <span>Pais de Origem</span>
+                                    </label>
+                                    <input type="text" id="corigin" name="corigin" placeholder="País de Origem"><br><br>
+                                    <label for="pssword">
+                                        <span>Senha</span>
+                                    </label>
+                                    <input type="password" id="pssword" name="pssword" placeholder="Senha"><br><br>
+                                </form>
+                            </aside>
+                            <aside class="part-two-sec-acc">
+                                <h3>Autenticação em Dois Fatores</h3>
+                                <section class="authentication">
+                                    <button>Ativado</button>
+                                    <button class="losinha">Desativado</button>
+                                </section>
+                                <aside class="margin-sec-acc">
+                                    <h3>Gerenciar Conta</h3>
+                                    <a href="#"><span>Gerenciar sessões da conta</span></a>
+                                    <p><a href="#"><span>Gerenciar contas conectadas</span></a></p>
+                                </aside> -->
+                                <h3>Excluir a Conta</h3>
+                                <button class="deactivate-account">Excluir conta permanentemente</button>
+
+                                <!-- Modal de confirmação -->
+                                <div id="confirmModal" style="display: none;">
+                                    <p>Você tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.
+                                    </p>
+                                    <button id="confirmDelete">Sim, excluir</button>
+                                    <button id="cancelDelete">Cancelar</button>
+                                </div>
+
+                                <script>
+                                    document.querySelector('.deactivate-account').addEventListener('click', function () {
+                                        // Mostrar o modal de confirmação
+                                        document.getElementById('confirmModal').style.display = 'block';
+                                    });
+
+                                    // Ação ao confirmar a exclusão
+                                    document.getElementById('confirmDelete').addEventListener('click', function () {
+                                        fetch('/api/excluir-conta', {
+                                            method: 'DELETE',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                                'Authorization': 'Bearer ' + localStorage.getItem('token')
+                                            }
+                                        })
+                                            .then(response => {
+                                                console.log('Response:', response); // Adicione este log
+                                                if (response.ok) {
+                                                    alert('Conta excluída com sucesso!');
+                                                    window.location.href = '/'; // Redirecionar para a home
+                                                } else {
+                                                    alert('Erro ao excluir a conta. Tente novamente.');
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Erro:', error);
+                                                alert('Erro ao excluir a conta. Tente novamente.');
+                                            });
+                                    });
+
+                                    // Ação ao cancelar a exclusão
+                                    document.getElementById('cancelDelete').addEventListener('click', function () {
+                                        document.getElementById('confirmModal').style.display = 'none'; // Fechar o modal
+                                    });
+                                </script>
+                                <p><span>Esta ação é permanente e você não conseguirá recuperar sua conta.</span></p>
+                            </aside>
+                        </article>
+                    </article>
+                </section>
+                <section id="mustaches" class="ajustcontent">
+                    <article class="golden-mustaches-payment">
+                        <h2 class="title-aside">Bigodes de Ouro e Pagamentos</h2>
+                        <article class="content-ajustments">
+                            <aside class="actual-plan">
+                                <h3>Plano Atual</h3>
+                                <figure class="buying-options">
+                                    <span>Nenhum plano adiquirido</span>
+                                </figure>
+                                <!-- <span>Plano Semanal R$ 6,90</span>
+                                <a href="#">Cancelar</a>
+                                <section class="forma-de-pagamento">
+                                    <h3>Forma de Pagamento</h3>
+                                    <span>Cobrança Automática</span>
+                                </section>
+                                <figure></figure>
+                                <article class="payment-option">
+                                    <aside class="client-card-top">
+                                        <span>Cartão de Crédito </span>
+                                        <img src="/imagens-svg/2-body/cartao-elo.svg" alt="Selo do Cartão">
+                                    </aside>
+                                    <aside class="client-card-bottom">
+                                        <span>**** **** **** 6969</span>
+                                        <p><span>******* ***** ** ********</span></p>
+                                        <p><span>Vencimento **/** CVV ***</span></p>
+                                    </aside>
+                                </article>
+                                <button>Alterar Forma de Pagamento</button> -->
+                            </aside>
+                            <aside class="history-payment">
+                                <h3>Histórico de Pagamentos</h3>
+                                <figure class="buying-options">
+                                    <span>Nenhum pagamento efetuado</span>
+                                </figure>
+                                <!-- <figure class="buying-options-mid">
+                                    <span>Ativo Plano Semanal R$ 6,99</span>
+                                    <span>De 26/08/24 até 02/09/2024</span>
+                                </figure>
+                                <figure class="buying-options">
+                                    <span>Ativo Plano Semanal R$ 6,99</span>
+                                    <span>De 26/08/24 até 02/09/2024</span>
+                                </figure> -->
+                            </aside>
+                        </article>
+                    </article>
+                    <article class="mustaches-payment-offlog">
+                        <aside>
+                            <span>Plano Atual</span>
+                            <span>Você não possui nenhuma assinatura ativa</span>
+                            <span>Forma de Pagamento</span>
+                            <span>Cobrança Automática</span>
+                            <figure>Não</figure>
+                            <button>Editar Forma de Pagamento</button>
+                        </aside>
+                        <aside>
+                            <span>Histórico de Pagamentos</span>
+                            <figure>
+                                <span>Inativo Plano Mensal R$27,99</span>
+                                <p><span>De 26/07/24 até 25/08/2024</span></p>
+                            </figure>
+                            <figure>
+                                <span>Inativo Plano Mensal R$27,99</span>
+                                <p><span>De 26/07/24 até 25/08/2024</span></p>
+                            </figure>
+                        </aside>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </main>
+    
+   <script src="../js/script-ajustes.js"></script>
+</body>
